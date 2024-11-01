@@ -5,25 +5,33 @@ This project is a document-based question-answering (QA) application using Strea
 
 # Features
 Document Embedding: Supports loading documents from PDF files, chunking and embedding them for efficient retrieval.
+
 NVIDIA NIM API Integration: Utilizes NVIDIA’s language models for high-quality, context-aware answers.
+
 Streamlit UI: Provides a simple, interactive interface for asking questions and displaying relevant document content.
+
 FAISS Vector Store: Uses FAISS for fast vector-based similarity search on embedded document chunks.
 
 
 # STEPS TO RUN
 # Step 1: Clone the Repository
+
 Start by cloning the repository to your local machine:
 
 git clone <repository-url>
+
 cd <repository-directory>
 
 # Step 2: Create a Virtual Environment
+
 To keep dependencies isolated, create a virtual environment:
 
 python3 -m venv venv
+
 source venv/bin/activate    # On Windows, use venv\Scripts\activate
 
 # Step 3: Create the .env File
+
 The .env file will store the NVIDIA API key for accessing NVIDIA NIM. You can get this key by signing up at: https://build.nvidia.com/nim. (1000 credits free on signing up)
 
 In the root directory of the project, create a new file named .env. Open the .env file and add your NVIDIA API key as shown below:
@@ -52,13 +60,13 @@ Add your PDF documents to this directory.
 
 - Streamlit Application (app.py):
 
-The primary application file app.py should be in the root directory.
-This file initializes document embeddings, retrieves relevant documents, and generates answers.
+The primary application file app.py should be in the root directory. This file initializes document embeddings, retrieves relevant documents, and generates answers.
 
 # Step 6: Run the Application
 To start the Streamlit application, use the following command:
 
 streamlit run app.py
+
 Upon starting, the application will open in your browser, and you can interact with the document QA system.
 
 
@@ -80,8 +88,11 @@ Expand the Document Similarity Search section to see document chunks related to 
 ### Project Structure
 
 ├── app.py               # Main application file
+
 ├── .env                 # Environment variables (NVIDIA API key)
+
 ├── requirements.txt     # Required dependencies
+
 └── us_census/           # Directory for PDF files
 
 ### Troubleshooting
