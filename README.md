@@ -1,4 +1,3 @@
-# NVIDIA-NIM-Project
 # Nvidia NIM Document QA System Project
 
 This project is a document-based question-answering (QA) application using Streamlit and LangChain integrated with NVIDIA NIM for natural language understanding and document retrieval. By embedding documents into vector representations and utilizing NVIDIA’s LLM (Large Language Model) endpoints, users can query specific documents for context-driven responses.
