@@ -120,6 +120,7 @@ FAISS Vector Store: Stores and retrieves vector embeddings based on similarity.
 
 1. Embedding Documents:
 
+```python
 def vector_embedding():
     if "vectors" not in st.session_state:
         st.session_state.embeddings = NVIDIAEmbeddings()
@@ -132,14 +133,10 @@ def vector_embedding():
         
 2. Querying NVIDIA NIM for Document-Based QA:
 
+```python
 if prompt1:
-
     document_chain = create_stuff_documents_chain(llm, prompt)
-    
     retriever = st.session_state.vectors.as_retriever()
-    
     retrieval_chain = create_retrieval_chain(retriever, document_chain)
-    
     response = retrieval_chain.invoke({'input': prompt1})
-    
     st.write(response['answer'])
