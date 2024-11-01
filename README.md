@@ -129,7 +129,7 @@ def vector_embedding():
         st.session_state.text_splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=50)
         st.session_state.final_documents = st.session_state.text_splitter.split_documents(st.session_state.docs[:30])
         st.session_state.vectors = FAISS.from_documents(st.session_state.final_documents, st.session_state.embeddings)
-
+```
         
 2. Querying NVIDIA NIM for Document-Based QA:
 
@@ -140,3 +140,4 @@ if prompt1:
     retrieval_chain = create_retrieval_chain(retriever, document_chain)
     response = retrieval_chain.invoke({'input': prompt1})
     st.write(response['answer'])
+```
