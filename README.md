@@ -24,7 +24,7 @@ python3 -m venv venv
 source venv/bin/activate    # On Windows, use venv\Scripts\activate
 
 # Step 3: Create the .env File
-The .env file will store the NVIDIA API key for accessing NVIDIA NIM. 
+The .env file will store the NVIDIA API key for accessing NVIDIA NIM. You can get this key by signing up at: https://build.nvidia.com/nim. (1000 credits free on signing up)
 
 In the root directory of the project, create a new file named .env. Open the .env file and add your NVIDIA API key as shown below:
 
@@ -43,9 +43,11 @@ For Retrieval-Augmented Generation (RAG), ensure the following files and directo
 - Document Directory:
 
 Place your PDF files for QA in the directory ./us_census.
+
 You can create this directory in the project root if it doesn’t already exist:
 
 mkdir us_census
+
 Add your PDF documents to this directory.
 
 - Streamlit Application (app.py):
@@ -58,3 +60,32 @@ To start the Streamlit application, use the following command:
 
 streamlit run app.py
 Upon starting, the application will open in your browser, and you can interact with the document QA system.
+
+
+
+### Usage Instructions
+
+1. Embedding Documents:
+
+Once the application loads, click the Documents Embedding button to create vector embeddings of the documents. This process prepares the vector store for quick document retrieval.
+
+2. Ask Questions:
+
+Use the input box to enter a question related to the documents. The NVIDIA NIM model will process the query and return the answer based on relevant document content.
+
+3. View Relevant Content:
+
+Expand the Document Similarity Search section to see document chunks related to your query, giving insight into the context used to generate the answer.
+
+### Project Structure
+
+├── app.py               # Main application file
+├── .env                 # Environment variables (NVIDIA API key)
+├── requirements.txt     # Required dependencies
+└── us_census/           # Directory for PDF files
+
+### Troubleshooting
+
+API Key Not Found: If the API key is not loaded, ensure the .env file is correctly set up and contains the line NVIDIA_API_KEY=<your_nvidia_api_key>.
+
+Dependencies Issue: If you encounter issues with dependencies, make sure the virtual environment is activated and try reinstalling using pip install -r requirements.txt.
