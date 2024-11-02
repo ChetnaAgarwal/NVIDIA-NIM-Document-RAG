@@ -2,6 +2,11 @@
 
 This project is a document-based question-answering (QA) application using Streamlit and LangChain integrated with NVIDIA NIM for natural language understanding and document retrieval. By embedding documents into vector representations and utilizing NVIDIA’s LLM (Large Language Model) endpoints, users can query specific documents for context-driven responses.
 
+# Demonstration Video
+
+[Watch the video](./Demonstration%20video.mp4)
+
+
 # Features
 Document Embedding: Supports loading documents from PDF files, chunking and embedding them for efficient retrieval.
 
